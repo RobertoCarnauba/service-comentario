@@ -1,6 +1,7 @@
 package com.malutech.dto;
 
 import java.io.Serializable;
+import java.util.Optional;
 
 import com.malutech.domain.User;
 
@@ -11,13 +12,13 @@ public class UserDTO implements Serializable {
 	private String name;
 	private String email;
 	
-	public UserDTO() {
+	public UserDTO(Optional<User> user) {
 	}
 	
-	public UserDTO(User obj) {
-		id = obj.getId();
-		name = obj.getName();
-		email = obj.getEmail();
+	public UserDTO(User x) {
+		id = x.getId();
+		name = x.getName();
+		email = x.getEmail();
 	}
 
 	public String getId() {
